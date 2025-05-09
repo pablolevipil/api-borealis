@@ -96,3 +96,37 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+📘 API Borealis – Documentación
+
+✅ Versiones utilizadas
+NestJS: 11.0.1
+Node.js: 22.0.0
+PostgreSQL: latest
+Docker: 24.x
+Docker Compose: 2.x
+
+
+Pasos para levantar el entorno
+1. Clonar el repositorio: 
+git clone https://github.com/tu-usuario/api-borealis.git
+cd api-borealis
+las variables de entorno estan en el repositorio(considerando que es una prueba).
+
+2. Instalar dependencias
+npm i
+
+3. Levantar entorno con Docker Compose
+docker-compose up -d
+
+4. Ejecutar migraciones y seeds
+npm run m:gen
+npm run m:run
+
+5. Ejecutar aplicacion
+npm run start:dev
+
+🧪 Testear endpoints
+Con Postman
+1. URL base: http://localhost:3000
+2. Ejemplo de ruta: [GET /categoria/1](http://localhost:3000/categoria/1)
