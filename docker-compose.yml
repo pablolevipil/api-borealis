@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  borealis_pg:
+    image: postgres:latest
+    container_name: borealis_pg
+    restart: always
+    environment:
+      POSTGRES_DB: borealis
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
